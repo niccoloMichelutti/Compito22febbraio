@@ -14,8 +14,7 @@
 #define PROGRAM "writer" /**< Nome del programma da eseguire. */
 
 /**
- * @brief Funzione per creare un nuovo processo utilizzando fork e exec.
- * @param program Il nome del programma da eseguire.
+ * @brief Funzione per creare un nuovo processo utilizzando fork e exec
  * @param argument Un array di stringhe contenente gli argomenti del programma.
  * @return 0 se il processo è stato creato correttamente, -1 in caso di errore.
  */
