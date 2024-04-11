@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 
 #define BLOCK_DIM 1024
 
@@ -63,6 +64,10 @@ int main(int argc, char* argv[])
       }
       while ((n = read(p[0], buffer, sizeof(buffer))) > 0)
 		   fwrite(buffer, 1, n, file);
+		   printf("inserisci la risposta: ")
+		   scanf("%d",&n);
+		   fwrite(buffer, 1, n, file);
+
 	  fclose(file);
 	  close(p[0]);
       return 1;
